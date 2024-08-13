@@ -8,3 +8,7 @@ const { test, expect } = require('@playwright/test');
   await page.waitForTimeout(10000);
 });
 */
+
+/*
+const locator = page.getByRole('link', { name: 'Пакетные предложения' })
+await expect(locator).toBeVisible()*/
