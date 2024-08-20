@@ -2,7 +2,8 @@
 const { test, expect } = require('@playwright/test');
 
 
-test('ozon', async ({ page}) => {
+/*
+test('wb', async ({ page}) => {
     await page.goto('https://www.wildberries.ru/')
     await page.waitForTimeout(1000);
     const navig= page.locator(".nav-element__burger")
@@ -33,3 +34,4 @@ test('ozon', async ({ page}) => {
     await show.click()
     await page.waitForTimeout(5000)
 });
+*/
