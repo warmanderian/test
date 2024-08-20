@@ -1,0 +1,23 @@
+const {test} = require("@playwright/test");
+test('computer', async ({ page}) => {
+    await page.goto('https://www.wildberries.ru/')
+    await page.waitForTimeout(1000)
+    await page.locator('.search-catalog__input').fill('Компьютер')
+    await page.waitForTimeout(1000)
+    await page.keyboard.press('Enter')
+    await page.waitForTimeout(1000)
+    await page.getByText('Все фильтры').click()
+    await page.waitForTimeout(1000)
+    await page.locator('.checkbox-with-text__text').filter({hasText:'Компьютер 9'}).click()
+    await page.waitForTimeout(1000)
+    await page.getByText('SSD 6').click()
+    await page.waitForTimeout(1000)
+    await page.getByText('8 GB 1').click()
+    await page.waitForTimeout(1000)
+    await page.getByText('Windows').click()
+    await page.waitForTimeout(1000)
+    await page.getByText('Встроенная').click()
+    await page.waitForTimeout(1000)
+    await page.getByRole('button', { name: 'Показать', exact: true }).click()
+    await page.waitForTimeout(5000)
+});

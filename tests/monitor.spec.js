@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 
 
 
-test('wb', async ({ page}) => {
+/*test('wb', async ({ page}) => {
     await page.goto('https://www.wildberries.ru/')
     await page.waitForTimeout(1000);
     const navig= page.locator(".search-catalog__input")
@@ -23,4 +23,4 @@ test('wb', async ({ page}) => {
     await page.locator(".product-card__wrapper").nth(4).click()
     await page.waitForTimeout(5000)
 });
-
+*/
